@@ -1,0 +1,23 @@
+[
+  {
+    "field": "business_hours.timezone",
+    "old_value": null,
+    "new_value": "Central Time",
+    "action": "resolved",
+    "reason": "Provided in onboarding."
+  },
+  {
+    "field": "office_address",
+    "old_value": { "street": null, "city": "Austin", "state": null, "zip": null, "country": null },
+    "new_value": { "street": "8900 Research Blvd", "city": "Austin", "state": "TX", "zip": "78758", "country": "USA" },
+    "action": "resolved",
+    "reason": "Full address provided."
+  },
+  {
+    "field": "emergency_routing_rules.secondary_contact",
+    "old_value": { "name": "backup", "phone": "512-555-0127" },
+    "new_value": { "name": "Mike Rodriguez", "phone": "512-555-0127" },
+    "action": "modified",
+    "reason": "Full name provided."
+  }
+]

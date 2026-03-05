@@ -1,0 +1,53 @@
+{
+  "account_id": "bens-electric-solutions",
+  "company_name": "Ben's Electric Solutions",
+  "business_hours": {
+    "monday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "tuesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "wednesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "thursday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "friday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "saturday": { "start": null, "end": null, "is_open": false },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": "Mountain Standard Time (MST)",
+    "notes": "Open Monday to Friday 8am to 5pm."
+  },
+  "office_address": {
+    "street": "123 4th Ave SW",
+    "city": "Calgary",
+    "state": "AB",
+    "zip": "T2P 1H4",
+    "country": "Canada"
+  },
+  "services_supported": ["commercial electrical work"],
+  "emergency_definition": {
+    "triggers": ["gas station pumps down", "burning smells", "sparks", "power loss", "exposed wires"],
+    "examples": ["gas station pumps down", "burning smells"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Ben Penoyer", "phone": "403-975-1773" },
+    "secondary_contact": { "name": "Greg (Ops Manager)", "phone": "TBD" },
+    "fallback_procedure": "voicemail",
+    "timeout_seconds": 30,
+    "retry_count": 2
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "403-975-1773" },
+    "after_hours": { "method": "voicemail", "message": null },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": 30,
+    "retry_attempts": 2,
+    "transfer_fail_message": "I couldn't reach the team directly, but I've sent an urgent alert.",
+    "fallback_action": "voicemail"
+  },
+  "integration_constraints": ["Use Jobber"],
+  "after_hours_flow_summary": "Emergency calls try Ben then voicemail. Non-emergency goes to voicemail.",
+  "office_hours_flow_summary": "Calls go to Ben's cell.",
+  "questions_or_unknowns": [],
+  "notes": "Ben Penoyer is the owner.",
+  "version": "v2",
+  "last_updated": "2026-03-05T08:15:00Z"
+}

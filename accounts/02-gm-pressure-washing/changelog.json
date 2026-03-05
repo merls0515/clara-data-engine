@@ -1,0 +1,23 @@
+[
+  {
+    "field": "business_hours.timezone",
+    "old_value": null,
+    "new_value": "Eastern Time",
+    "action": "resolved",
+    "reason": "Provided in onboarding."
+  },
+  {
+    "field": "office_address",
+    "old_value": { "street": null, "city": "Tampa", "state": null, "zip": null, "country": null },
+    "new_value": { "street": "1234 Industrial Blvd", "city": "Tampa", "state": "FL", "zip": "33602", "country": "USA" },
+    "action": "resolved",
+    "reason": "Full address provided."
+  },
+  {
+    "field": "secondary_contact",
+    "old_value": null,
+    "new_value": { "name": "Maria", "phone": "813-555-0124" },
+    "action": "added",
+    "reason": "Provided in onboarding."
+  }
+]

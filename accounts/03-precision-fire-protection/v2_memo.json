@@ -1,0 +1,53 @@
+{
+  "account_id": "precision-fire-protection",
+  "company_name": "Precision Fire Protection",
+  "business_hours": {
+    "monday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "tuesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "wednesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "thursday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "friday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "saturday": { "start": null, "end": null, "is_open": false },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": "Central Time",
+    "notes": "Mon-Fri 8am-5pm"
+  },
+  "office_address": {
+    "street": "8900 Research Blvd",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78758",
+    "country": "USA"
+  },
+  "services_supported": ["commercial sprinklers", "inspections"],
+  "emergency_definition": {
+    "triggers": ["sprinkler leaks", "alarm failures", "water flowing from sprinklers", "alarm failure in occupied buildings", "frozen pipes"],
+    "examples": ["sprinkler leaks", "frozen pipes"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Sarah Chen", "phone": "512-555-0126" },
+    "secondary_contact": { "name": "Mike Rodriguez", "phone": "512-555-0127" },
+    "fallback_procedure": "call backup",
+    "timeout_seconds": 45,
+    "retry_count": 2
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "512-555-0125" },
+    "after_hours": { "method": "message", "message": "take message" },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": 45,
+    "retry_attempts": 2,
+    "transfer_fail_message": "I couldn't reach the team directly, but I've sent an urgent alert.",
+    "fallback_action": "take message"
+  },
+  "integration_constraints": ["Use ServiceTitan"],
+  "after_hours_flow_summary": "Emergency calls try Sarah then Mike. Non-emergency takes message.",
+  "office_hours_flow_summary": "Calls go to office line.",
+  "questions_or_unknowns": [],
+  "notes": "Sarah Chen is the owner.",
+  "version": "v2",
+  "last_updated": "2026-03-05T08:25:00Z"
+}

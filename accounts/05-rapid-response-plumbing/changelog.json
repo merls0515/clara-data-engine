@@ -1,0 +1,16 @@
+[
+  {
+    "field": "business_hours.timezone",
+    "old_value": null,
+    "new_value": "Arizona Time (no DST)",
+    "action": "resolved",
+    "reason": "Provided in onboarding."
+  },
+  {
+    "field": "office_address",
+    "old_value": { "street": null, "city": "Phoenix", "state": null, "zip": null, "country": null },
+    "new_value": { "street": "4321 N Central Ave", "city": "Phoenix", "state": "AZ", "zip": "85012", "country": "USA" },
+    "action": "resolved",
+    "reason": "Full address provided."
+  }
+]

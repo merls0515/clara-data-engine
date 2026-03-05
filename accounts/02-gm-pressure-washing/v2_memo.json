@@ -1,0 +1,53 @@
+{
+  "account_id": "gm-pressure-washing",
+  "company_name": "GM Pressure Washing",
+  "business_hours": {
+    "monday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "tuesday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "wednesday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "thursday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "friday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "saturday": { "start": "08:00 AM", "end": "02:00 PM", "is_open": true },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": "Eastern Time",
+    "notes": "Closed Sunday"
+  },
+  "office_address": {
+    "street": "1234 Industrial Blvd",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33602",
+    "country": "USA"
+  },
+  "services_supported": ["residential driveways", "commercial lots"],
+  "emergency_definition": {
+    "triggers": ["chemical spills", "equipment failure", "safety hazards"],
+    "examples": ["chemical spills", "equipment breakdown"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Gregory Martinez", "phone": "813-555-0123" },
+    "secondary_contact": { "name": "Maria", "phone": "813-555-0124" },
+    "fallback_procedure": "voicemail",
+    "timeout_seconds": 30,
+    "retry_count": 1
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "813-555-0123" },
+    "after_hours": { "method": "voicemail", "message": null },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": 30,
+    "retry_attempts": 1,
+    "transfer_fail_message": "I couldn't reach the team directly, but I've sent an alert.",
+    "fallback_action": "voicemail"
+  },
+  "integration_constraints": ["Use Jobber"],
+  "after_hours_flow_summary": "Emergency calls try Greg then Maria. Non-emergency goes to voicemail.",
+  "office_hours_flow_summary": "Calls go to Greg.",
+  "questions_or_unknowns": [],
+  "notes": "Gregory Martinez is the owner.",
+  "version": "v2",
+  "last_updated": "2026-03-05T08:20:00Z"
+}

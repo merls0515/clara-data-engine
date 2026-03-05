@@ -1,0 +1,44 @@
+[
+  {
+    "field": "business_hours.saturday.is_open",
+    "old_value": null,
+    "new_value": false,
+    "action": "modified",
+    "reason": "Explicitly set to false based on 'Open Monday to Friday' statement and user request."
+  },
+  {
+    "field": "business_hours.sunday.is_open",
+    "old_value": null,
+    "new_value": false,
+    "action": "modified",
+    "reason": "Explicitly set to false based on 'Open Monday to Friday' statement and user request."
+  },
+  {
+    "field": "business_hours.timezone",
+    "old_value": null,
+    "new_value": "Mountain Standard Time (MST)",
+    "action": "resolved",
+    "reason": "Provided in onboarding transcript."
+  },
+  {
+    "field": "office_address",
+    "old_value": { "street": null, "city": "Calgary", "state": null, "zip": null, "country": null },
+    "new_value": { "street": "123 4th Ave SW", "city": "Calgary", "state": "AB", "zip": "T2P 1H4", "country": "Canada" },
+    "action": "resolved",
+    "reason": "Full address provided in onboarding."
+  },
+  {
+    "field": "secondary_contact",
+    "old_value": null,
+    "new_value": { "name": "Greg (Ops Manager)", "phone": "TBD" },
+    "action": "added",
+    "reason": "Added based on user request and onboarding context."
+  },
+  {
+    "field": "questions_or_unknowns",
+    "old_value": ["Missing timezone", "Missing full office address", "Missing secondary emergency contact", "Missing transfer timeout and retry settings"],
+    "new_value": [],
+    "action": "resolved",
+    "reason": "All gaps filled during onboarding."
+  }
+]

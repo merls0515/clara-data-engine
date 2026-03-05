@@ -1,0 +1,53 @@
+{
+  "account_id": "comfort-plus-hvac",
+  "company_name": "Comfort Plus HVAC",
+  "business_hours": {
+    "monday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "tuesday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "wednesday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "thursday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "friday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "saturday": { "start": "08:00 AM", "end": "04:00 PM", "is_open": true },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": "Mountain Time",
+    "notes": "Closed Sunday"
+  },
+  "office_address": {
+    "street": "5678 Broadway",
+    "city": "Denver",
+    "state": "CO",
+    "zip": "80202",
+    "country": "USA"
+  },
+  "services_supported": ["residential heating", "residential AC"],
+  "emergency_definition": {
+    "triggers": ["furnace failure below 40°", "AC failure above 90°", "CO alarms", "gas leaks"],
+    "examples": ["no heat below 40F", "AC out above 90F"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Michael O'Brien", "phone": "303-555-0129" },
+    "secondary_contact": { "name": "Dave Sullivan", "phone": "303-555-0130" },
+    "fallback_procedure": "text both",
+    "timeout_seconds": 40,
+    "retry_count": 1
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "303-555-0128" },
+    "after_hours": { "method": "voicemail", "message": null },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": 40,
+    "retry_attempts": 1,
+    "transfer_fail_message": "I couldn't reach the team directly, but I've sent an urgent alert.",
+    "fallback_action": "text both"
+  },
+  "integration_constraints": ["Use Housecall Pro"],
+  "after_hours_flow_summary": "Emergency calls try Mike then Dave. Non-emergency goes to voicemail.",
+  "office_hours_flow_summary": "Calls go to office line.",
+  "questions_or_unknowns": [],
+  "notes": "Michael O'Brien and Dave Sullivan are partners.",
+  "version": "v2",
+  "last_updated": "2026-03-05T08:30:00Z"
+}

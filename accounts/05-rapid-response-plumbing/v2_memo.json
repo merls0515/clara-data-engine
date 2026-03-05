@@ -1,0 +1,53 @@
+{
+  "account_id": "rapid-response-plumbing",
+  "company_name": "Rapid Response Plumbing",
+  "business_hours": {
+    "monday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "tuesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "wednesday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "thursday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "friday": { "start": "08:00 AM", "end": "05:00 PM", "is_open": true },
+    "saturday": { "start": null, "end": null, "is_open": false },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": "Arizona Time (no DST)",
+    "notes": "24/7 for emergencies"
+  },
+  "office_address": {
+    "street": "4321 N Central Ave",
+    "city": "Phoenix",
+    "state": "AZ",
+    "zip": "85012",
+    "country": "USA"
+  },
+  "services_supported": ["residential plumbing", "commercial plumbing"],
+  "emergency_definition": {
+    "triggers": ["burst pipes", "sewer backups", "no water", "any water leak causing damage", "complete water loss"],
+    "examples": ["burst pipes", "sewer backup"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Anthony DeLuca", "phone": "602-555-0132" },
+    "secondary_contact": { "name": "Carlos", "phone": "602-555-0133" },
+    "fallback_procedure": "call backup",
+    "timeout_seconds": 35,
+    "retry_count": 1
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "602-555-0131" },
+    "after_hours": { "method": "message", "message": "follow up next business day" },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": 35,
+    "retry_attempts": 1,
+    "transfer_fail_message": "I couldn't reach the team directly, but I've sent an urgent alert.",
+    "fallback_action": "take message"
+  },
+  "integration_constraints": ["Use Jobber"],
+  "after_hours_flow_summary": "Emergency calls try Tony then Carlos. Non-emergency takes message.",
+  "office_hours_flow_summary": "Calls go to office line.",
+  "questions_or_unknowns": [],
+  "notes": "Anthony DeLuca is the owner.",
+  "version": "v2",
+  "last_updated": "2026-03-05T08:35:00Z"
+}

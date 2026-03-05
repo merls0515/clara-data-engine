@@ -1,0 +1,16 @@
+[
+  {
+    "field": "business_hours.timezone",
+    "old_value": null,
+    "new_value": "Mountain Time",
+    "action": "resolved",
+    "reason": "Provided in onboarding."
+  },
+  {
+    "field": "office_address",
+    "old_value": { "street": null, "city": "Denver", "state": null, "zip": null, "country": null },
+    "new_value": { "street": "5678 Broadway", "city": "Denver", "state": "CO", "zip": "80202", "country": "USA" },
+    "action": "resolved",
+    "reason": "Full address provided."
+  }
+]

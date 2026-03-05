@@ -1,0 +1,61 @@
+{
+  "account_id": "precision-fire-protection",
+  "company_name": "Precision Fire Protection",
+  "business_hours": {
+    "monday": {"start": "08:00 AM", "end": "05:00 PM", "is_open": true},
+    "tuesday": {"start": "08:00 AM", "end": "05:00 PM", "is_open": true},
+    "wednesday": {"start": "08:00 AM", "end": "05:00 PM", "is_open": true},
+    "thursday": {"start": "08:00 AM", "end": "05:00 PM", "is_open": true},
+    "friday": {"start": "08:00 AM", "end": "05:00 PM", "is_open": true},
+    "saturday": {"start": null, "end": null, "is_open": null},
+    "sunday": {"start": null, "end": null, "is_open": null},
+    "timezone": null,
+    "notes": "Mon-Fri 8am-5pm"
+  },
+  "office_address": {
+    "street": null, 
+    "city": "Austin", 
+    "state": null, 
+    "zip": null, 
+    "country": null
+  },
+  "services_supported": [
+    "commercial sprinklers", 
+    "inspections"
+  ],
+  "emergency_definition": {
+    "triggers": ["sprinkler leaks", "alarm failures"],
+    "examples": ["sprinkler leaks"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": {"name": "Sarah Chen", "phone": "512-555-0126"},
+    "secondary_contact": {"name": "backup", "phone": "512-555-0127"},
+    "fallback_procedure": null,
+    "timeout_seconds": null,
+    "retry_count": null
+  },
+  "non_emergency_routing_rules": {
+    "during_business": {"method": "phone", "contact": "512-555-0125"},
+    "after_hours": {"method": null, "message": null},
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": null,
+    "retry_attempts": null,
+    "transfer_fail_message": null,
+    "fallback_action": null
+  },
+  "integration_constraints": [],
+  "after_hours_flow_summary": "Emergency calls try Sarah then backup. Non-emergency routing unknown.",
+  "office_hours_flow_summary": "Calls go to office line.",
+  "questions_or_unknowns": [
+    "Missing timezone",
+    "Missing full office address",
+    "Missing non-emergency after-hours procedure",
+    "Missing transfer timeout and retry settings"
+  ],
+  "notes": null,
+  "version": "v1",
+  "last_updated": "2026-03-05T08:10:00Z"
+}

@@ -1,0 +1,54 @@
+{
+  "account_id": "comfort-plus-hvac",
+  "company_name": "Comfort Plus HVAC",
+  "business_hours": {
+    "monday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "tuesday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "wednesday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "thursday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "friday": { "start": "07:00 AM", "end": "07:00 PM", "is_open": true },
+    "saturday": { "start": "08:00 AM", "end": "04:00 PM", "is_open": true },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": null,
+    "notes": "Closed Sunday"
+  },
+  "office_address": {
+    "street": null, "city": "Denver", "state": null, "zip": null, "country": null
+  },
+  "services_supported": ["residential heating", "residential AC"],
+  "emergency_definition": {
+    "triggers": ["no heat below 50°", "AC out above 90°"],
+    "examples": ["no heat below 50F"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Mike", "phone": "303-555-0129" },
+    "secondary_contact": { "name": "Dave", "phone": "303-555-0130" },
+    "fallback_procedure": null,
+    "timeout_seconds": null,
+    "retry_count": null
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "303-555-0128" },
+    "after_hours": { "method": "voicemail", "message": null },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": null,
+    "retry_attempts": null,
+    "transfer_fail_message": null,
+    "fallback_action": null
+  },
+  "integration_constraints": [],
+  "after_hours_flow_summary": "Emergency calls try Mike then Dave. Non-emergency goes to voicemail.",
+  "office_hours_flow_summary": "Calls go to office line.",
+  "questions_or_unknowns": [
+    "Missing timezone",
+    "Missing full office address",
+    "Missing transfer timeout and retry settings",
+    "Missing fallback procedure if Dave doesn't answer"
+  ],
+  "notes": null,
+  "version": "v1",
+  "last_updated": "2026-03-05T08:10:00Z"
+}

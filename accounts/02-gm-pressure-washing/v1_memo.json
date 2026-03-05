@@ -1,0 +1,54 @@
+{
+  "account_id": "gm-pressure-washing",
+  "company_name": "GM Pressure Washing",
+  "business_hours": {
+    "monday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "tuesday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "wednesday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "thursday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "friday": { "start": "07:00 AM", "end": "06:00 PM", "is_open": true },
+    "saturday": { "start": "08:00 AM", "end": "02:00 PM", "is_open": true },
+    "sunday": { "start": null, "end": null, "is_open": false },
+    "timezone": null,
+    "notes": "Closed Sunday"
+  },
+  "office_address": {
+    "street": null, "city": "Tampa", "state": null, "zip": null, "country": null
+  },
+  "services_supported": ["residential driveways", "commercial lots"],
+  "emergency_definition": {
+    "triggers": ["chemical spills", "equipment failure"],
+    "examples": ["chemical spills"],
+    "exclusions": []
+  },
+  "emergency_routing_rules": {
+    "primary_contact": { "name": "Greg", "phone": "813-555-0123" },
+    "secondary_contact": { "name": null, "phone": null },
+    "fallback_procedure": "voicemail",
+    "timeout_seconds": null,
+    "retry_count": null
+  },
+  "non_emergency_routing_rules": {
+    "during_business": { "method": "phone", "contact": "813-555-0123" },
+    "after_hours": { "method": "voicemail", "message": null },
+    "timeout_seconds": null
+  },
+  "call_transfer_rules": {
+    "max_wait_time": null,
+    "retry_attempts": null,
+    "transfer_fail_message": null,
+    "fallback_action": null
+  },
+  "integration_constraints": [],
+  "after_hours_flow_summary": "Emergency calls try Greg then voicemail. Non-emergency goes to voicemail.",
+  "office_hours_flow_summary": "Calls go to Greg.",
+  "questions_or_unknowns": [
+    "Missing timezone",
+    "Missing full office address",
+    "Missing secondary emergency contact",
+    "Missing transfer timeout and retry settings"
+  ],
+  "notes": null,
+  "version": "v1",
+  "last_updated": "2026-03-05T08:10:00Z"
+}

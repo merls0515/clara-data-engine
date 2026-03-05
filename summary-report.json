@@ -1,0 +1,14 @@
+{
+  "total_accounts": 5,
+  "processed_accounts": [
+    "Ben's Electric Solutions",
+    "GM Pressure Washing",
+    "Precision Fire Protection",
+    "Comfort Plus HVAC",
+    "Rapid Response Plumbing"
+  ],
+  "total_v1_questions_flagged": 20,
+  "total_v2_questions_resolved": 20,
+  "resolution_rate": "100%",
+  "last_run": "2026-03-05T08:40:00Z"
+}
